@@ -1,8 +1,8 @@
 ## Jxnge Stats Data Visualization Website
 This is a simple PHP-based website designed to display data visualizations in SVG format and provide downloads of catalogs containing data, visualizations, and source files in ZIP format. Below is a brief guide on how to set up and launch this website using XAMPP.
 
-#Setup Instructions:
-###Install XAMPP:
+# Setup Instructions:
+### Install XAMPP:
 
 Download and install XAMPP according to your operating system.
 Clone or Download the Repository:
