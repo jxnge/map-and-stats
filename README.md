@@ -22,6 +22,6 @@ Upon accessing the website, you'll see a list of data catalogs available for vis
 Click on the name of a catalog to view its visualization.
 To download a catalog containing data, visualizations, and source files, click on the "Download" button next to the catalog name.
 
-##Notes:
+## Notes:
 This website utilizes PHP to dynamically generate the list of catalogs and their corresponding SVG and ZIP files.
 Ensure that XAMPP is correctly configured and running to host the website locally.
