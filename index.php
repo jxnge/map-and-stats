@@ -17,17 +17,20 @@
         <?php
             $catalogs = glob('Data/*', GLOB_ONLYDIR);
             foreach($catalogs as $catalog) {
-            $catalogName = basename($catalog);
-            $svgFiles = glob("$catalog/*.svg");
-            $zipFiles = glob("$catalog/*.zip");
-            foreach($svgFiles as $svgFile) {
-                $svgFileName = $svgFile; // use the full path
+                $catalogName = basename($catalog);
+                $svgFiles = glob("$catalog/*.svg");
+                $zipFiles = glob("$catalog/*.zip");
+
+                foreach($svgFiles as $svgFile) {
+                    $svgFileName = $svgFile;
+                }
+
+                foreach($zipFiles as $zipFile) {
+                    $zipFileName = $zipFile;
+                }
+                
+                echo "<li><a href='$svgFileName'>$catalogName</a>   <a href='$zipFileName' id='download' download>Download</a></li>";
             }
-            foreach($zipFiles as $zipFile) {
-                $zipFileName = $zipFile; // use the full path
-            }
-            echo "<li><a href='$svgFileName'>$catalogName</a>   <a href='$zipFileName' id='download' download>Download</a></li>";
-        }
         ?>
         </ul>
     </main>
