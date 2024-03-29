@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html">Jxnge Stats</a>
+        <a href="index.php">Jxnge Stats</a>
     </header>
     <main>
         <h1>Below there is some data. If you want to see visualisation of particular data (like map, chart, etc.) click on the name of that data.</h1>
