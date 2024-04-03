@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html">Jxnge Stats</a>
+        <a href="index.php">Jxnge Stats</a>
     </header>
     <main>
         <h1>Below there is some data. If you want to see visualisation of particular data (like map, chart, etc.) click on the name of that data.</h1>
@@ -17,17 +17,20 @@
         <?php
             $catalogs = glob('Data/*', GLOB_ONLYDIR);
             foreach($catalogs as $catalog) {
-            $catalogName = basename($catalog);
-            $svgFiles = glob("$catalog/*.svg");
-            $zipFiles = glob("$catalog/*.zip");
-            foreach($svgFiles as $svgFile) {
-                $svgFileName = $svgFile; // use the full path
+                $catalogName = basename($catalog);
+                $svgFiles = glob("$catalog/*.svg");
+                $zipFiles = glob("$catalog/*.zip");
+
+                foreach($svgFiles as $svgFile) {
+                    $svgFileName = $svgFile;
+                }
+
+                foreach($zipFiles as $zipFile) {
+                    $zipFileName = $zipFile;
+                }
+                
+                echo "<li><a href='$svgFileName'>$catalogName</a>   <a href='$zipFileName' id='download' download>Download</a></li>";
             }
-            foreach($zipFiles as $zipFile) {
-                $zipFileName = $zipFile; // use the full path
-            }
-            echo "<li><a href='$svgFileName'>$catalogName</a>   <a href='$zipFileName' id='download' download>Download</a></li>";
-        }
         ?>
         </ul>
     </main>
