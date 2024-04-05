@@ -29,6 +29,7 @@ main{
     height: 80dvh;
     background-color: rgb(235, 235, 159);
     padding: 10px 20px;
+    overflow: scroll;
 }
 
 main h1{
